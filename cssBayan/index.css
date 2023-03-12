@@ -3,6 +3,7 @@
     width: 100%;
     height: 100%;
     margin: 0;
+    font-family: Roboto, sans-serif;
 }
 
 .accordion {
@@ -16,11 +17,13 @@
 }
 
 .accordion-close {
+    margin-top: 1em;
     display: none;
+    width: 1em;
+    height: 1em;
 }
 
 .accordion:hover .accordion-close {
-    width: 30px;
     display: block;
     cursor: pointer;
     transition: transform .25s, opacity .25s;
@@ -39,25 +42,34 @@
     border-bottom: 1px solid lightgrey;
 }
 
-.accordion_item:focus {
-    height: 250px;
+.accordion_item:active {
+    color: dodgerblue;
 }
 
+.accordion_item:active svg path {
+    fill: dodgerblue;
+}
+
+.accordion_item:focus,
 .accordion_item:hover {
-    height: 250px;
+    height: 15.6em;
 }
 
-.accordion_item:hover .accordion-close {
-    transform: rotate(45deg) translate(-50%);
+.accordion_item:hover .accordion-close,
+.accordion_item:focus .accordion-close {
+    transform: rotate(45deg);
 }
 
 .image {
-    width: 200px;
-    height: 200px;
+    width: 12.5em;
+    height: 12.5em;
+}
+
+.accordion_title {
+    height: 2.18em;
 }
 
 .accordion_title,
 .accordion-close {
-    margin-top: 15px;
-    height: 50px;
+    margin-top: 1em;
 }
