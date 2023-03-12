@@ -1,0 +1,46 @@
+.accordion-container {
+    background: #f6f6ec;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.accordion {
+    padding: 0;
+    width: 50%;
+    margin: auto;
+}
+
+.accordion li {
+    list-style-type: none;
+}
+
+.accordion-close {
+    display: none;
+}
+
+.accordion:hover .accordion-close {
+    display: block;
+    cursor: pointer;
+}
+
+.accordion_item {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    overflow: hidden;
+    transition: height 2s;
+}
+
+.accordion_item:hover {
+    height: 250px;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+}
+
+.accordion_title {
+    height: 50px;
+}
