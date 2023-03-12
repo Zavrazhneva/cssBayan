@@ -48,7 +48,7 @@
 }
 
 .accordion_item:hover .accordion-close {
-    transform: rotate(45deg) translate(-55%);
+    transform: rotate(45deg) translate(-50%);
 }
 
 .image {
