@@ -30,17 +30,19 @@
 }
 
 .accordion_item {
+    font-size: 1.2em;
     display: flex;
     flex-direction: column;
-    height: 50px;
+    align-items: center;
+    height: 3.1em;
     overflow: hidden;
     transition: height 2s;
     cursor: pointer;
-    margin-bottom: 1em;
+    outline: none;
 }
 
 .accordion_item:not(:last-child) {
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 0.1em solid lightgrey;
 }
 
 .accordion_item:active {
@@ -79,4 +81,21 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+@media only screen and (max-width: 820px) {
+
+    h1 {
+        font-size: 1.5em;
+    }
+    .accordion {
+        width: 70%;
+    }
+    .image {
+        width: 10em;
+        height: 10em;
+    }
+    .accordion_item {
+        font-size: 0.8em;
+    }
 }
