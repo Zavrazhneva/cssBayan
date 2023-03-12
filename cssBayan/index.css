@@ -31,11 +31,12 @@
 
 .accordion_item {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     height: 50px;
     overflow: hidden;
     transition: height 2s;
     cursor: pointer;
+    margin-bottom: 1em;
 }
 
 .accordion_item:not(:last-child) {
@@ -52,7 +53,7 @@
 
 .accordion_item:focus,
 .accordion_item:hover {
-    height: 15.6em;
+    height: 17.6em;
 }
 
 .accordion_item:hover .accordion-close,
@@ -72,4 +73,10 @@
 .accordion_title,
 .accordion-close {
     margin-top: 1em;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
