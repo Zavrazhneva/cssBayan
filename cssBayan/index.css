@@ -20,8 +20,10 @@
 }
 
 .accordion:hover .accordion-close {
+    width: 30px;
     display: block;
     cursor: pointer;
+    transition: transform .25s, opacity .25s;
 }
 
 .accordion_item {
@@ -30,10 +32,23 @@
     height: 50px;
     overflow: hidden;
     transition: height 2s;
+    cursor: pointer;
+}
+
+.accordion_item:not(:last-child) {
+    border-bottom: 1px solid lightgrey;
+}
+
+.accordion_item:focus {
+    height: 250px;
 }
 
 .accordion_item:hover {
     height: 250px;
+}
+
+.accordion_item:hover .accordion-close {
+    transform: rotate(45deg) translate(-55%);
 }
 
 .image {
@@ -41,6 +56,8 @@
     height: 200px;
 }
 
-.accordion_title {
+.accordion_title,
+.accordion-close {
+    margin-top: 15px;
     height: 50px;
 }
