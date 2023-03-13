@@ -1,0 +1,128 @@
+.accordion-container {
+    background: #f6f6ec;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    padding: 3em 0;
+}
+
+h1 {
+    width: 50%;
+    margin: auto;
+}
+
+.accordion {
+    padding: 0;
+    width: 50%;
+    margin: auto;
+}
+
+.accordion li {
+    list-style-type: none;
+}
+
+.accordion-close {
+    margin-top: 1em;
+    opacity: 0;
+    width: 1em;
+    height: 1em;
+}
+
+.accordion:hover .accordion-close {
+    opacity: 1;
+    cursor: pointer;
+    transition: transform .25s, opacity .25s;
+}
+
+.accordion_item {
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 3.1em;
+    overflow: hidden;
+    transition: height 2s;
+    cursor: pointer;
+    outline: none;
+}
+
+.accordion_item:not(:last-child) {
+    border-bottom: 0.1em solid lightgrey;
+}
+
+.accordion_item:active {
+    color: dodgerblue;
+}
+
+.accordion_item:active .image {
+    opacity: 0.7;
+}
+
+.accordion_item:active svg path {
+    fill: dodgerblue;
+}
+
+.accordion_item:focus,
+.accordion_item:hover {
+    height: 17.6em;
+}
+
+.accordion_item:hover .accordion-close,
+.accordion_item:focus .accordion-close {
+    transform: rotate(45deg);
+}
+
+.image {
+    width: 12.5em;
+    height: 12.5em;
+}
+
+.accordion_title {
+    height: 2.18em;
+}
+
+.accordion_title,
+.accordion-close {
+    margin-top: 1em;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media only screen and (max-width: 820px) {
+
+    h1 {
+        width: 70%;
+        font-size: 1.5em;
+    }
+    .accordion {
+        width: 70%;
+    }
+    .accordion-close {
+        opacity: 1;
+    }
+    .image {
+        width: 10em;
+        height: 10em;
+    }
+    .accordion_item {
+        font-size: 0.8em;
+    }
+    .accordion_item:hover {
+        height: 3.1em;
+    }
+    .accordion_item:focus {
+        cursor: auto;
+        height: 15em;
+    }
+    .accordion_item:hover:not(:active,:focus) .accordion-close {
+        transform: none;
+    }
+    .accordion_item:active .accordion-close {
+        transform: rotate(45deg);
+    }
+}
