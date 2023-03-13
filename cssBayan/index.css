@@ -24,13 +24,13 @@ h1 {
 
 .accordion-close {
     margin-top: 1em;
-    display: none;
+    opacity: 0;
     width: 1em;
     height: 1em;
 }
 
 .accordion:hover .accordion-close {
-    display: block;
+    opacity: 1;
     cursor: pointer;
     transition: transform .25s, opacity .25s;
 }
@@ -53,6 +53,10 @@ h1 {
 
 .accordion_item:active {
     color: dodgerblue;
+}
+
+.accordion_item:active .image {
+    opacity: 0.7;
 }
 
 .accordion_item:active svg path {
@@ -98,6 +102,9 @@ h1 {
     .accordion {
         width: 70%;
     }
+    .accordion-close {
+        opacity: 1;
+    }
     .image {
         width: 10em;
         height: 10em;
@@ -105,8 +112,17 @@ h1 {
     .accordion_item {
         font-size: 0.8em;
     }
-    .accordion_item:hover,
+    .accordion_item:hover {
+        height: 3.1em;
+    }
     .accordion_item:focus {
+        cursor: auto;
         height: 15em;
+    }
+    .accordion_item:hover:not(:active,:focus) .accordion-close {
+        transform: none;
+    }
+    .accordion_item:active .accordion-close {
+        transform: rotate(45deg);
     }
 }
