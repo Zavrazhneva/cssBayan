@@ -4,6 +4,12 @@
     height: 100%;
     margin: 0;
     font-family: Roboto, sans-serif;
+    padding: 3em 0;
+}
+
+h1 {
+    width: 50%;
+    margin: auto;
 }
 
 .accordion {
@@ -86,6 +92,7 @@
 @media only screen and (max-width: 820px) {
 
     h1 {
+        width: 70%;
         font-size: 1.5em;
     }
     .accordion {
@@ -97,5 +104,9 @@
     }
     .accordion_item {
         font-size: 0.8em;
+    }
+    .accordion_item:hover,
+    .accordion_item:focus {
+        height: 15em;
     }
 }
